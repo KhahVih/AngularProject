@@ -133,6 +133,22 @@
   },
   {
     "ContainingType": "API_Product.Controllers.ProductsController",
+    "Method": "GetProductByName",
+    "RelativePath": "api/Products/GetProductByName/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_Product.Controllers.ProductsController",
     "Method": "GetUser",
     "RelativePath": "api/Products/GetUser",
     "HttpMethod": "GET",
@@ -155,6 +171,36 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_Product.Controllers.ProductsController",
+    "Method": "SortByNameProduct",
+    "RelativePath": "api/Products/SortByNameProduct(A-Z)",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_Product.Controllers.ProductsController",
+    "Method": "SortByPriceDESCProduct",
+    "RelativePath": "api/Products/SortByPriceProduct(Giam)",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API_Product.Controllers.ProductsController",
+    "Method": "SortByPriceASCProduct",
+    "RelativePath": "api/Products/SortByPriceProduct(Tang)",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

@@ -59,6 +59,90 @@ namespace API_Product.Controllers
             return new JsonResult(table);
         }
 
+        [HttpGet("GetProductByName/{name}")]
+        public JsonResult GetProductByName(string name)
+        {
+            string query = "select * from Products where ProductName like N'%" + name + "%' ";
+            DataTable table = new DataTable();
+            String sql = _configuration.GetConnectionString("Product");
+            SqlDataReader reader;
+            using (SqlConnection con = new SqlConnection(sql))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    reader = cmd.ExecuteReader();
+                    table.Load(reader);
+                    reader.Close();
+                    con.Close();
+                }
+            }
+            return new JsonResult(table);
+        }
+
+        [HttpGet("SortByNameProduct(A-Z)")]
+        public JsonResult SortByNameProduct()
+        {
+            string query = "select * from Products order by ProductName asc ";
+            DataTable table = new DataTable();
+            String sql = _configuration.GetConnectionString("Product");
+            SqlDataReader reader;
+            using (SqlConnection con = new SqlConnection(sql))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    reader = cmd.ExecuteReader();
+                    table.Load(reader);
+                    reader.Close();
+                    con.Close();
+                }
+            }
+            return new JsonResult(table);
+        }
+
+        [HttpGet("SortByPriceProduct(Tang)")]
+        public JsonResult SortByPriceASCProduct()
+        {
+            string query = "select * from Products order by ProductPrice asc ";
+            DataTable table = new DataTable();
+            String sql = _configuration.GetConnectionString("Product");
+            SqlDataReader reader;
+            using (SqlConnection con = new SqlConnection(sql))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    reader = cmd.ExecuteReader();
+                    table.Load(reader);
+                    reader.Close();
+                    con.Close();
+                }
+            }
+            return new JsonResult(table);
+        }
+
+        [HttpGet("SortByPriceProduct(Giam)")]
+        public JsonResult SortByPriceDESCProduct()
+        {
+            string query = "select * from Products order by ProductPrice desc ";
+            DataTable table = new DataTable();
+            String sql = _configuration.GetConnectionString("Product");
+            SqlDataReader reader;
+            using (SqlConnection con = new SqlConnection(sql))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    reader = cmd.ExecuteReader();
+                    table.Load(reader);
+                    reader.Close();
+                    con.Close();
+                }
+            }
+            return new JsonResult(table);
+        }
+
         [HttpPost("AddProduct")]
         public JsonResult AddProduct(Product p)
         {

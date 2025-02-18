@@ -70,3 +70,4 @@ C:\Angular And ASP.NET\API_Product\API_Product\obj\Debug\net8.0\refint\API_Produ
 C:\Angular And ASP.NET\API_Product\API_Product\obj\Debug\net8.0\API_Product.pdb
 C:\Angular And ASP.NET\API_Product\API_Product\obj\Debug\net8.0\API_Product.genruntimeconfig.cache
 C:\Angular And ASP.NET\API_Product\API_Product\obj\Debug\net8.0\ref\API_Product.dll
+C:\Angular And ASP.NET\API_Product\API_Product\obj\Debug\net8.0\API_Product.sourcelink.json
